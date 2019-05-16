@@ -1,0 +1,30 @@
+  .letras {
+    color: white;
+  }
+
+  .fundo {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .bg-img {
+    background-image: url("6821.jpg");
+  }
+
+  .parallax {
+  opacity: 0.8;
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#rdp {
+  background: #363537; }
+
+p#rdp {
+  color: #ffc857; }
+/*# sourceMappingURL=style.css.map */

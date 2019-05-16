@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PrjProfessores</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="src/bootstrap.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="src/freelancer.css" rel="stylesheet">
+  <!-- Plugin CSS -->
+  <link href="src/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Fontes-->
+  <link href="src/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top">
+
+  <!-- Menu Superior -->
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Angelina Melaré</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="modalLogin" href="#inscricao">Inscreva-se !</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ModalLogin modal -->
+<div class="modal fade" id="#modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLogin">Login</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+    <label for="recipient-name" class="col-form-label">Recipient:</label>
+    <input type="text" class="form-control" id="recipient-name">
+</div>
+<div class="form-group">
+    <label for="message-text" class="col-form-label">Message:</label>
+    <textarea class="form-control" id="message-text"></textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Send message</button>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- Primeiro bloco de informações -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container">
+      <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+      <h1 class="text-uppercase mb-0">Angelina Melaré</h1>
+      <hr class="star-light">
+      <h3 class="font-weight-light mb-0">Professora da Faculdade de Tecnologia de Itu- Fatec Itu e prestadora de serviços na Área de Desenvolvimento de Sistemas. Atualmente ministro aulas de Linguagem de Programação nos cursos de Gestão da Tecnologia da Informação, Análise e Desenvolvimento de Sistemas.
+      Aqui você encontra os conteúdos das minhas aulas, lista de exercícios, apostilas, links de conteúdos para estudo,  informações sobre provas e entregas de atividades e demais assuntos relacionados as disciplinas que ministro.
+        </h3>
+    </div>
+  </header>
+
+<!-- Formulário de inscrição  -->
+<section id="inscricao">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Preencha seus dados:</h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Nome</label>
+                <input class="form-control" id="name" type="text" placeholder="Nome" required="required" data-validation-required-message="Por favor preencha seu nome !">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Email</label>
+                <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor preencha seu email !">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Login</label>
+                <input class="form-control" id="login" type="text" placeholder="Login" required="required" data-validation-required-message="Por favor preencha seu nome !">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Senha</label>
+                <textarea class="form-" id="password" type="password" placeholder="Senha" required="required" data-validation-required-message="Por favor preencha sua senha !"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <label>Confirmação de Senha</label>
+                    <textarea class="form-control" id="password" type="password" placeholder="Confirmação de senha" required="required" data-validation-required-message="Por favor confirme sua senha !"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+                </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Cadastrar !</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">Links Úteis</h2>
+      <hr class="star-light mb-5">
+      <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <p class="lead"></p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <p class="lead"></p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        
+      </div>
+    </div>
+  </section>
+    <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mx-auto mb-lg-0">
+          <h4 class="text-uppercase mb-4">Redes Sociais</h4>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fab fa-fw fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fab fa-fw fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fab fa-fw fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fab fa-fw fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <i class="fab fa-fw fa-dribbble"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Your Website 2019</small>
+    </div>
+  </div>
+
+  <!-- Botão Topo (Apenas Extra pequeno e pequeno) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="src/jquery.js"></script>
+  <script src="src/bootstrap.bundle.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="src/jquery.easing.js"></script>
+  <script src="src/jquery.magnific-popup.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="src/freelancer.js"></script>
+
+</body>
+</html>
