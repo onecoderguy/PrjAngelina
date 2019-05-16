@@ -1,0 +1,130 @@
+C:\Users\unknown\Desktop\AngelinaPrj\bin\AngelinaPrj.dll.config
+C:\Users\unknown\Desktop\AngelinaPrj\bin\AngelinaPrj.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\AngelinaPrj.pdb
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\csc.exe
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\csc.exe.config
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\csc.rsp
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\csi.exe
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\csi.rsp
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.AppContext.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\vbc.exe
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\vbc.exe.config
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\vbc.rsp
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\VBCSCompiler.exe
+C:\Users\unknown\Desktop\AngelinaPrj\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\unknown\Desktop\AngelinaPrj\bin\EntityFramework.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\EntityFramework.SqlServer.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Security.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Owin.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Helpers.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Mvc.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Razor.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.Deployment.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.Razor.dll
+C:\Users\unknown\Desktop\AngelinaPrj\bin\EntityFramework.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\EntityFramework.SqlServer.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Security.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Razor.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.Deployment.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Webpages.Razor.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Helpers.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\System.Web.Mvc.xml
+C:\Users\unknown\Desktop\AngelinaPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.csprojAssemblyReference.cache
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CoreCompileInputs.cache
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.dll
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.InitialCreate.resources
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
+C:\Users\unknown\Desktop\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.CriaTipoUsuario.resources
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.dll.config
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.pdb
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\csc.exe
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\csc.exe.config
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\csc.rsp
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\csi.exe
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\csi.rsp
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.AppContext.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\vbc.exe
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\vbc.exe.config
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\vbc.rsp
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\VBCSCompiler.exe
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\EntityFramework.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\EntityFramework.SqlServer.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Security.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Owin.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Helpers.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Mvc.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Razor.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.Razor.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\EntityFramework.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\EntityFramework.SqlServer.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Security.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Razor.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Webpages.Razor.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Helpers.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\System.Web.Mvc.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csprojAssemblyReference.cache
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.InitialCreate.resources
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.CriaTipoUsuario.resources
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CoreCompileInputs.cache
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
+C:\Users\Windows 7\Desktop\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
