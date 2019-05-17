@@ -7,10 +7,7 @@ namespace AngelinaPrj.Models
 {
     public enum TipoUsuario
     {
-        Padrao,
-        Administrador,
-        FatecItu,
-        FatecSorocaba,
-        Facens
+        Aluno,
+        Professor
     }
 }

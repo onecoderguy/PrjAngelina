@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -14,14 +16,18 @@ namespace AngelinaPrj.Models
         public string Nome { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string Login { get; set; }
+        public DateTime DataNascimento { get; set; } 
+
+        [Required]
+        [MaxLength(100)]
+        public string Email { get; set; }
 
         [Required]
         [MaxLength(100)]
         public string Senha { get; set; }
 
         [Required]
-        public TipoUsuario Tipo { get; set; } = TipoUsuario.Padrao;
+        [DefaultValue(0)]
+        public TipoUsuario Tipo { get; set; } = TipoUsuario.Aluno;
     }
 }

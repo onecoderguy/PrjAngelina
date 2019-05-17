@@ -8,9 +8,9 @@ namespace AngelinaPrj.ViewModel
         [HiddenInput]
         public string UrlRetorno { get; set; }
 
-        [Required(ErrorMessage = "Informe o login")]
-        [MaxLength(50, ErrorMessage = "O login deve ter até 50 caracteres")]
-        public string Login { get; set; }
+        [Required(ErrorMessage = "Informe o email")]
+        [MaxLength(50, ErrorMessage = "O email deve ter até 100 caracteres")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe a senha")]
         [DataType(DataType.Password)]

@@ -26,9 +26,11 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                @if (User.IsInRole("Administrador"))
-                                {
+                                @if (User.IsInRole("Professor")){
                                     <li>@Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil")</li>
+                                }
+                                else if (User.IsInRole("Aluno")){
+                                    <li>@Html.ActionLink("Mensagens", "Mensagens", "Painel")</li>
                                 }
                                 <li>@Html.ActionLink("Sair", "Logout", "Autenticacao")</li>
                             </ul>

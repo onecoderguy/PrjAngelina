@@ -27,16 +27,17 @@ namespace AngelinaPrj.Controllers
                 return View(viewmodel);
             }
 
-            if (db.Usuarios.Count(u => u.Login == viewmodel.Login) > 0)
+            if (db.Usuarios.Count(u => u.Email == viewmodel.Email) > 0)
             {
-                ModelState.AddModelError("Login", "Esse login já está em uso !");
+                ModelState.AddModelError("Email", "Esse já está cadastrado !");
                 return View(viewmodel);
             }
 
             Usuario novoUsuario = new Usuario
             {
                 Nome = viewmodel.Nome,
-                Login = viewmodel.Login,
+                Email = viewmodel.Email,
+                DataNascimento = viewmodel.DataNascimento,
                 Senha = Hash.GerarHash(viewmodel.Senha)
             };
 
@@ -66,11 +67,11 @@ namespace AngelinaPrj.Controllers
                 return View(viewmodel);
             }
 
-            var usuario = db.Usuarios.FirstOrDefault(u => u.Login == viewmodel.Login);
+            var usuario = db.Usuarios.FirstOrDefault(u => u.Email == viewmodel.Email);
 
             if (usuario == null)
             {
-                ModelState.AddModelError("Login", "Login incorreto");
+                ModelState.AddModelError("Email", "Email incorreto");
                 return View(viewmodel);
             }
 
@@ -83,7 +84,7 @@ namespace AngelinaPrj.Controllers
             var identity = new ClaimsIdentity(new[]
             {
                 new Claim(ClaimTypes.Name, usuario.Nome),
-                new Claim("Login", usuario.Login),
+                new Claim("Email", usuario.Email),
                 new Claim(ClaimTypes.Role, usuario.Tipo.ToString())
             }, "ApplicationCookie");
 

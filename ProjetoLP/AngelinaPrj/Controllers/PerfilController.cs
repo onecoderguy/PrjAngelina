@@ -28,9 +28,9 @@ namespace AngelinaPrj.Controllers
             }
 
             var identity = User.Identity as ClaimsIdentity;
-            var login = identity.Claims.FirstOrDefault(c => c.Type == "Login").Value;
+            var login = identity.Claims.FirstOrDefault(c => c.Type == "Email").Value;
 
-            var usuario = db.Usuarios.FirstOrDefault(u => u.Login == login);
+            var usuario = db.Usuarios.FirstOrDefault(u => u.Email == login);
 
             if (Hash.GerarHash(viewmodel.SenhaAtual) != usuario.Senha)
             {
