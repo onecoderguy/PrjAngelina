@@ -1,14 +1,39 @@
-﻿
+﻿@model IEnumerable<AngelinaPrj.Models.Escola>
+
 @{
     ViewBag.Title = "Index";
 }
 
-@if (TempData["Mensagem"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["Mensagem"]
-    </div>
-}
-
 <h2>Index</h2>
 
+<p>
+    @Html.ActionLink("Adicionar Escola", "CadastrarEscola", "Painel")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cidade)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarEscola", new { EscolaId = item.EscolaId}) |
+            @Html.ActionLink("Details", "Details", new { id=item.EscolaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EscolaId })
+        </td>
+    </tr>
+}
+
+</table>

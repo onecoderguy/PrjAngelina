@@ -10,7 +10,6 @@ namespace AngelinaPrj.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AngelinaPrj.Models.PrjContext";
         }
 
         protected override void Seed(AngelinaPrj.Models.PrjContext context)

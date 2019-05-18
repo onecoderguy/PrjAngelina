@@ -37,7 +37,7 @@ namespace AngelinaPrj.Controllers
             {
                 Nome = viewmodel.Nome,
                 Email = viewmodel.Email,
-                DataNascimento = viewmodel.DataNascimento,
+                DataNascimento = Convert.ToDateTime(viewmodel.DataNascimento),
                 Senha = Hash.GerarHash(viewmodel.Senha)
             };
 

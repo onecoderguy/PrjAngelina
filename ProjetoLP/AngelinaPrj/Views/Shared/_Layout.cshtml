@@ -28,6 +28,7 @@
                             <ul class="dropdown-menu">
                                 @if (User.IsInRole("Professor")){
                                     <li>@Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil")</li>
+                                    <li>@Html.ActionLink("Painel", "Index", "Painel")</li>
                                 }
                                 else if (User.IsInRole("Aluno")){
                                     <li>@Html.ActionLink("Mensagens", "Mensagens", "Painel")</li>

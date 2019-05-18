@@ -17,7 +17,7 @@ namespace AngelinaPrj
                 LoginPath = new PathString("/Autenticacao/Login")
             });
 
-            AntiForgeryConfig.UniqueClaimTypeIdentifier = "Login";
+            AntiForgeryConfig.UniqueClaimTypeIdentifier = "Email";
         }
     }
 }

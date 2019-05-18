@@ -186,11 +186,13 @@ E:\PrjAngelina\ProjetoLP\AngelinaPrj\bin\System.Web.Helpers.xml
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\bin\System.Web.Mvc.xml
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csprojAssemblyReference.cache
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.InitialCreate.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.CriaTipoUsuario.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CoreCompileInputs.cache
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.PadronizandoClasseUsuarios.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.AgoraVai.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoTabelaCurso.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos1.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos2.resources

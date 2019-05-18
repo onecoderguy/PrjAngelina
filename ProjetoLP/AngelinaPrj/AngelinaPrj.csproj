@@ -114,6 +114,7 @@
     <Content Include="App_Data\DatabaseAdapted_log.ldf">
       <DependentUpon>DatabaseAdapted.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Databasev.2.mdf" />
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
@@ -139,7 +140,6 @@
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Autenticacao\Login.cshtml" />
-    <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Painel\Mensagens.cshtml" />
     <Content Include="Views\Perfil\AlterarSenha.cshtml" />
   </ItemGroup>
@@ -152,20 +152,30 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904240708351_InitialCreate.cs" />
-    <Compile Include="Migrations\201904240708351_InitialCreate.Designer.cs">
-      <DependentUpon>201904240708351_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201905181737570_AgoraVai.cs" />
+    <Compile Include="Migrations\201905181737570_AgoraVai.Designer.cs">
+      <DependentUpon>201905181737570_AgoraVai.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904240902385_CriaTipoUsuario.cs" />
-    <Compile Include="Migrations\201904240902385_CriaTipoUsuario.Designer.cs">
-      <DependentUpon>201904240902385_CriaTipoUsuario.cs</DependentUpon>
+    <Compile Include="Migrations\201905181757038_ArrumandoTabelaCurso.cs" />
+    <Compile Include="Migrations\201905181757038_ArrumandoTabelaCurso.Designer.cs">
+      <DependentUpon>201905181757038_ArrumandoTabelaCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905171350230_PadronizandoClasseUsuarios.cs" />
-    <Compile Include="Migrations\201905171350230_PadronizandoClasseUsuarios.Designer.cs">
-      <DependentUpon>201905171350230_PadronizandoClasseUsuarios.cs</DependentUpon>
+    <Compile Include="Migrations\201905181800222_ArrumandoRelacionamentos.cs" />
+    <Compile Include="Migrations\201905181800222_ArrumandoRelacionamentos.Designer.cs">
+      <DependentUpon>201905181800222_ArrumandoRelacionamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905181804481_ArrumandoRelacionamentos1.cs" />
+    <Compile Include="Migrations\201905181804481_ArrumandoRelacionamentos1.Designer.cs">
+      <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905181807317_ArrumandoRelacionamentos2.cs" />
+    <Compile Include="Migrations\201905181807317_ArrumandoRelacionamentos2.Designer.cs">
+      <DependentUpon>201905181807317_ArrumandoRelacionamentos2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Escola.cs" />
+    <Compile Include="Models\Materia.cs" />
     <Compile Include="Models\PrjContext.cs" />
     <Compile Include="Models\TipoUsuario.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -173,6 +183,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\Hash.cs" />
     <Compile Include="ViewModel\AlteraSenhaViewModel.cs" />
+    <Compile Include="ViewModel\CadastroEscolaViewModel.cs" />
     <Compile Include="ViewModel\CadastroViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
@@ -181,8 +192,11 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Autenticacao\Cadastrar.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Painel\CadastrarEscola.cshtml" />
+    <Content Include="Views\Autenticacao\Cadastrar.cshtml" />
+    <Content Include="Views\Painel\Index.cshtml" />
+    <Content Include="Views\Painel\EditarEscola.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,14 +205,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904240708351_InitialCreate.resx">
-      <DependentUpon>201904240708351_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905181737570_AgoraVai.resx">
+      <DependentUpon>201905181737570_AgoraVai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904240902385_CriaTipoUsuario.resx">
-      <DependentUpon>201904240902385_CriaTipoUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905181757038_ArrumandoTabelaCurso.resx">
+      <DependentUpon>201905181757038_ArrumandoTabelaCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905171350230_PadronizandoClasseUsuarios.resx">
-      <DependentUpon>201905171350230_PadronizandoClasseUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905181800222_ArrumandoRelacionamentos.resx">
+      <DependentUpon>201905181800222_ArrumandoRelacionamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905181804481_ArrumandoRelacionamentos1.resx">
+      <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905181807317_ArrumandoRelacionamentos2.resx">
+      <DependentUpon>201905181807317_ArrumandoRelacionamentos2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
