@@ -27,6 +27,7 @@ namespace AngelinaPrj.Models
         public string Descricao { get; set; }
 
         [Required]
+        [ForeignKey("")]
         public virtual Escola Escola { get; set; }
 
         public virtual ICollection<Materia> Materias { get; set; }

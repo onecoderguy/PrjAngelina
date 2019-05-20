@@ -140,12 +140,12 @@
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Autenticacao\Login.cshtml" />
-    <Content Include="Views\Painel\Mensagens.cshtml" />
     <Content Include="Views\Perfil\AlterarSenha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
+    <Compile Include="Controllers\CursoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
@@ -183,6 +183,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\Hash.cs" />
     <Compile Include="ViewModel\AlteraSenhaViewModel.cs" />
+    <Compile Include="ViewModel\CadastroCursoViewModel.cs" />
     <Compile Include="ViewModel\CadastroEscolaViewModel.cs" />
     <Compile Include="ViewModel\CadastroViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -197,6 +198,14 @@
     <Content Include="Views\Autenticacao\Cadastrar.cshtml" />
     <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Painel\EditarEscola.cshtml" />
+    <Content Include="Views\Perfil\Mensagens.cshtml" />
+    <Content Include="Views\Painel\Delete.cshtml" />
+    <Content Include="Views\Cursoes\Create.cshtml" />
+    <Content Include="Views\Cursoes\Delete.cshtml" />
+    <Content Include="Views\Cursoes\Details.cshtml" />
+    <Content Include="Views\Cursoes\Edit.cshtml" />
+    <Content Include="Views\Cursoes\Index.cshtml" />
+    <Content Include="Views\Painel\DetalhesEscola.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

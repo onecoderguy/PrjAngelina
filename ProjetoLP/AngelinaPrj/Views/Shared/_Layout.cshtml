@@ -31,7 +31,7 @@
                                     <li>@Html.ActionLink("Painel", "Index", "Painel")</li>
                                 }
                                 else if (User.IsInRole("Aluno")){
-                                    <li>@Html.ActionLink("Mensagens", "Mensagens", "Painel")</li>
+                                    <li>@Html.ActionLink("Mensagens", "Mensagens", "Perfil")</li>
                                 }
                                 <li>@Html.ActionLink("Sair", "Logout", "Autenticacao")</li>
                             </ul>

@@ -92,8 +92,18 @@ namespace AngelinaPrj.Controllers
 
             if (!String.IsNullOrWhiteSpace(viewmodel.UrlRetorno) || Url.IsLocalUrl(viewmodel.UrlRetorno))
                 return Redirect(viewmodel.UrlRetorno);
-            else
+            else if (User.IsInRole("Professor"))
+            {
                 return RedirectToAction("Index", "Painel");
+            }
+            else if (User.IsInRole("Aluno"))
+            {
+                return RedirectToAction("Mensagens", "Perfil");
+            }
+            else
+            {
+                return View(viewmodel);
+            }
         }
 
         public ActionResult Logout()

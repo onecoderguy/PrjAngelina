@@ -30,8 +30,8 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "EditarEscola", new { EscolaId = item.EscolaId}) |
-            @Html.ActionLink("Details", "Details", new { id=item.EscolaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EscolaId })
+            @Html.ActionLink("Details", "DetalhesEscola", new { EscolaId=item.EscolaId }) |
+            @Html.ActionLink("Apagar", "Delete", new { EscolaId=item.EscolaId })
         </td>
     </tr>
 }

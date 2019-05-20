@@ -12,12 +12,13 @@ namespace AngelinaPrj.Controllers
         private PrjContext db = new PrjContext();
 
         [Authorize]
-        // GET: Perfil
+        // GET: Perfil/AlterarSenha
         public ActionResult AlterarSenha()
         {
             return View();
         }
 
+        //POST: Perfil/AlterarSenha
         [Authorize]
         [HttpPost]
         public ActionResult AlterarSenha(AlteraSenhaViewModel viewmodel)
@@ -45,6 +46,12 @@ namespace AngelinaPrj.Controllers
             TempData["Mensagem"] = "Senha alterada com sucesso";
 
             return RedirectToAction("Index", "Painel");
+        }
+
+        //GET: Perfil/Mensagens
+        public ActionResult Mensagens()
+        {
+            return View();
         }
 
     }

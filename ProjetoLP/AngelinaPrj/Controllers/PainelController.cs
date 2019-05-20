@@ -9,20 +9,18 @@ using System.Net;
 namespace AngelinaPrj.Controllers
 {
 
-
+    [Authorize(Roles ="Professor")]
     public class PainelController : Controller
     {
         private PrjContext db = new PrjContext();
         
         // GET: Painel
-        [Authorize]
         public ActionResult Index()
         {
             return View(db.Escolas.ToList());
         }
 
         //GET: Painel/CadastrarEscola
-        [Authorize]
         public ActionResult CadastrarEscola()
         {
             return View();
@@ -30,6 +28,7 @@ namespace AngelinaPrj.Controllers
 
         //POST: Painel/CadastrarEscola
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CadastrarEscola(CadastroEscolaViewModel viewmodel)
         {
             if (!ModelState.IsValid)
@@ -57,7 +56,6 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Painel/EditarEscola
-        [Authorize]
         public ActionResult EditarEscola(int? EscolaId)
         {
             if (EscolaId == null)
@@ -76,7 +74,6 @@ namespace AngelinaPrj.Controllers
         }
 
         //POST: Painel/EditarEscola
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditarEscola([Bind(Include = "EscolaId,Nome,Cidade")]Escola escola)
@@ -90,6 +87,50 @@ namespace AngelinaPrj.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        // GET: Painel/DeletarEscola
+        public ActionResult Delete(int? EscolaId)
+        {
+            if (EscolaId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Escola escola = db.Escolas.Find(EscolaId);
+            if (escola == null)
+            {
+                return HttpNotFound();
+            }
+            return View(escola);
+        }
+
+        // POST: Painel/DeletarEscola
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int EscolaId)
+        {
+            Escola escola = db.Escolas.Find(EscolaId);
+            db.Escolas.Remove(escola);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET: Painel/DetalhesEscola
+        public ActionResult DetalhesEscola(int ? EscolaId)
+        {
+            if (EscolaId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Escola escola = db.Escolas.Find(EscolaId);
+
+            if(escola == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(escola);
         }
     }
 }
