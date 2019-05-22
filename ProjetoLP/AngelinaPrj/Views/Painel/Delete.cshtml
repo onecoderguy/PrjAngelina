@@ -1,0 +1,21 @@
+﻿@model AngelinaPrj.Models.Escola
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseja realmente deletar esta escola ?</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Não", "Index", "Painel", new { @class = "btn btn-default" })
+    </div>
+}
+<div>
+
+</div>

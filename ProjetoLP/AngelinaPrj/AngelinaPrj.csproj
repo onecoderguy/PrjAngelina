@@ -145,7 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
-    <Compile Include="Controllers\CursoesController.cs" />
+    <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
@@ -168,9 +168,9 @@
     <Compile Include="Migrations\201905181804481_ArrumandoRelacionamentos1.Designer.cs">
       <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905181807317_ArrumandoRelacionamentos2.cs" />
-    <Compile Include="Migrations\201905181807317_ArrumandoRelacionamentos2.Designer.cs">
-      <DependentUpon>201905181807317_ArrumandoRelacionamentos2.cs</DependentUpon>
+    <Compile Include="Migrations\201905210159441_NewMigration.cs" />
+    <Compile Include="Migrations\201905210159441_NewMigration.Designer.cs">
+      <DependentUpon>201905210159441_NewMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Curso.cs" />
@@ -186,6 +186,7 @@
     <Compile Include="ViewModel\CadastroCursoViewModel.cs" />
     <Compile Include="ViewModel\CadastroEscolaViewModel.cs" />
     <Compile Include="ViewModel\CadastroViewModel.cs" />
+    <Compile Include="ViewModel\EditaCursoViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -200,12 +201,12 @@
     <Content Include="Views\Painel\EditarEscola.cshtml" />
     <Content Include="Views\Perfil\Mensagens.cshtml" />
     <Content Include="Views\Painel\Delete.cshtml" />
-    <Content Include="Views\Cursoes\Create.cshtml" />
-    <Content Include="Views\Cursoes\Delete.cshtml" />
-    <Content Include="Views\Cursoes\Details.cshtml" />
-    <Content Include="Views\Cursoes\Edit.cshtml" />
-    <Content Include="Views\Cursoes\Index.cshtml" />
     <Content Include="Views\Painel\DetalhesEscola.cshtml" />
+    <Content Include="Views\Curso\CadastrarCurso.cshtml" />
+    <Content Include="Views\Curso\Index.cshtml" />
+    <Content Include="Views\Curso\EditarCurso.cshtml" />
+    <Content Include="Views\Curso\Delete.cshtml" />
+    <Content Include="Views\Curso\DetalhesCurso.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,10 +227,11 @@
     <EmbeddedResource Include="Migrations\201905181804481_ArrumandoRelacionamentos1.resx">
       <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905181807317_ArrumandoRelacionamentos2.resx">
-      <DependentUpon>201905181807317_ArrumandoRelacionamentos2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905210159441_NewMigration.resx">
+      <DependentUpon>201905210159441_NewMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

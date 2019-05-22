@@ -11,7 +11,7 @@ namespace AngelinaPrj.Controllers
     {
         private PrjContext db = new PrjContext();
 
-        [Authorize]
+        
         // GET: Perfil/AlterarSenha
         public ActionResult AlterarSenha()
         {
@@ -19,7 +19,6 @@ namespace AngelinaPrj.Controllers
         }
 
         //POST: Perfil/AlterarSenha
-        [Authorize]
         [HttpPost]
         public ActionResult AlterarSenha(AlteraSenhaViewModel viewmodel)
         {

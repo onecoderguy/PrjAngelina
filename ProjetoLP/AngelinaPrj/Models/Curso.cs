@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace AngelinaPrj.Models
 {
@@ -26,8 +27,9 @@ namespace AngelinaPrj.Models
         [MaxLength(500)]
         public string Descricao { get; set; }
 
-        [Required]
-        [ForeignKey("")]
+        [HiddenInput]
+        public int EscolaId { get; set; }
+
         public virtual Escola Escola { get; set; }
 
         public virtual ICollection<Materia> Materias { get; set; }

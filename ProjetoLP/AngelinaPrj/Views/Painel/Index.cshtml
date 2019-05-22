@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
+
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Adicionar Escola", "CadastrarEscola", "Painel")
-</p>
+@Html.ActionLink("Adicionar Escola", "CadastrarEscola", "Painel", null, new { @class="btn btn-default btn-lg"})
+
+<br/>
+
 <table class="table">
     <tr>
         <th>
@@ -29,9 +31,9 @@
             @Html.DisplayFor(modelItem => item.Cidade)
         </td>
         <td>
-            @Html.ActionLink("Editar", "EditarEscola", new { EscolaId = item.EscolaId}) |
-            @Html.ActionLink("Details", "DetalhesEscola", new { EscolaId=item.EscolaId }) |
-            @Html.ActionLink("Apagar", "Delete", new { EscolaId=item.EscolaId })
+                @Html.ActionLink("Editar", "EditarEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Detalhes", "DetalhesEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Apagar", "Delete", new { EscolaId = item.EscolaId }, new { @class = "btn btn-default" })
         </td>
     </tr>
 }

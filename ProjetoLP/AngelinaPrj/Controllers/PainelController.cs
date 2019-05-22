@@ -8,12 +8,11 @@ using System.Net;
 
 namespace AngelinaPrj.Controllers
 {
-
-    [Authorize(Roles ="Professor")]
+    [Authorize(Roles = "Professor")]
     public class PainelController : Controller
     {
         private PrjContext db = new PrjContext();
-        
+
         // GET: Painel
         public ActionResult Index()
         {
@@ -116,7 +115,7 @@ namespace AngelinaPrj.Controllers
         }
 
         // GET: Painel/DetalhesEscola
-        public ActionResult DetalhesEscola(int ? EscolaId)
+        public ActionResult DetalhesEscola(int? EscolaId)
         {
             if (EscolaId == null)
             {
@@ -125,12 +124,12 @@ namespace AngelinaPrj.Controllers
 
             Escola escola = db.Escolas.Find(EscolaId);
 
-            if(escola == null)
+            if (escola == null)
             {
                 return HttpNotFound();
             }
 
             return View(escola);
         }
-    }
+    }   
 }

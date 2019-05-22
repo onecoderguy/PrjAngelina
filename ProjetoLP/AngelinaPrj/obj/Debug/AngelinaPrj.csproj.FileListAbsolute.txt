@@ -195,4 +195,4 @@ E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResour
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoTabelaCurso.resources
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos.resources
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos1.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos2.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.NewMigration.resources

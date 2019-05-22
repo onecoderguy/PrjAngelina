@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AngelinaPrj.Models.Curso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Escola.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Escola.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarCurso", new { CursoId = item.CursoId, EscolaId = item.EscolaId } ,new { @class = "btn btn-default"})
+            @Html.ActionLink("Detalhes", "DetalhesCurso", new { CursoId=item.CursoId }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Deletar", "Delete", new { CursoId=item.CursoId }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+</table>
+
+<div>
+    @Html.ActionLink("Lista de escolas", "Index", "Painel", null, new { @class = "btn btn-default btn-info" })
+</div>
