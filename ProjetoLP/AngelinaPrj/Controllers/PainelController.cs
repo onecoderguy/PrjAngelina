@@ -129,7 +129,14 @@ namespace AngelinaPrj.Controllers
                 return HttpNotFound();
             }
 
-            return View(escola);
+            var cursos = db.Cursos.Where(e => e.EscolaId == EscolaId).ToList();
+            var view = new DetalhesEscolaViewModel()
+            {
+                Escola = escola,
+                Cursos = cursos
+            };
+
+            return View(view);
         }
     }   
 }
