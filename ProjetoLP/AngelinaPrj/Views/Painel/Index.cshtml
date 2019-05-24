@@ -5,28 +5,30 @@
 }
 
 
-<h2>Index</h2>
+<div class="container">
+    <h2>Escolas: </h2>
 
     <div class="row justify-content-center">
         @Html.ActionLink("Adicionar Escola", "CadastrarEscola", "Painel", null, new { @class = "btn btn-primary m-3" })
     </div>
 
-<br />
-<div class="row justify-content-center d-flex">
+    <br />
+    <div class="row justify-content-center d-flex">
 
-    @foreach (var item in Model)
-    {
+        @foreach (var item in Model)
+        {
 
-    <div class="card text-white bg-dark m-3 text-center flex-fill p-2" style="max-width: 18rem;">
-        <div class="card-header">@Html.DisplayFor(modelItem => item.Nome)</div>
-        <div class="card-body">
-            <p class="card-text">@Html.DisplayFor(modelItem => item.Cidade)</p>
-        </div>
-        @Html.ActionLink("Ver Cursos", "DetalhesEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-primary mx-1 my-1" })
-        @Html.ActionLink("Editar Informações", "EditarEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-light mx-1 my-1" })
-        @Html.ActionLink("Apagar", "Delete", new { EscolaId = item.EscolaId }, new { @class = "btn btn-danger mx-1 my-1" })
+            <div class="card text-white bg-dark m-3 text-center flex-fill p-2" style="max-width: 18rem;">
+                <div class="card-header">@Html.DisplayFor(modelItem => item.Nome)</div>
+                <div class="card-body">
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Cidade)</p>
+                </div>
+                @Html.ActionLink("Ver Cursos", "DetalhesEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-primary mx-1 my-1" })
+                @Html.ActionLink("Editar Informações", "EditarEscola", new { EscolaId = item.EscolaId }, new { @class = "btn btn-light mx-1 my-1" })
+                @Html.ActionLink("Apagar", "Delete", new { EscolaId = item.EscolaId }, new { @class = "btn btn-danger mx-1 my-1" })
+            </div>
+
+
+        }
     </div>
-
-
-    }
 </div>

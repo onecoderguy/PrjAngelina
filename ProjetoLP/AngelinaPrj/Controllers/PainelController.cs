@@ -1,10 +1,9 @@
 ﻿using AngelinaPrj.Models;
 using AngelinaPrj.ViewModel;
-using System.Web.Mvc;
-using System;
-using System.Linq;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
+using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
 {
@@ -130,6 +129,7 @@ namespace AngelinaPrj.Controllers
             }
 
             var cursos = db.Cursos.Where(e => e.EscolaId == EscolaId).ToList();
+
             var view = new DetalhesEscolaViewModel()
             {
                 Escola = escola,

@@ -16,5 +16,11 @@ namespace AngelinaPrj.Models
         public DbSet<Curso> Cursos { get; set; }
 
         public DbSet<Materia> Materias { get; set; }
+
+        public DbSet<Sala> Salas { get; set; }
+
+        public DbSet<Materia_Sala> Materias_Salas { get; set; }
+
+        public DbSet<Curso_Materia> Cursos_Materias { get; set; }
     }
 }

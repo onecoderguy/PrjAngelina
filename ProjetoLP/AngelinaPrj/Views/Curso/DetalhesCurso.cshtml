@@ -1,48 +1,34 @@
-﻿@model AngelinaPrj.Models.Curso
+﻿@model AngelinaPrj.ViewModel.DetalhesCursoViewModel
 
 @{
     ViewBag.Title = "DetalhesCurso";
 }
 
-<h2>DetalhesCurso</h2>
+<div class="container">
+    <h2>Materias de: @Model.Curso.Nome</h2>
 
-<div>
-    <h4>Curso</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+    <div class="col-12">
+        <div class="row justify-content-center">
+            @foreach (var materia in Model.Materias)
+            {
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+                <div class="card text-white bg-dark m-3 text-center" style="max-width: 18rem;">
+                    <div class="card-header">@materia.Nome</div>
+                    <div class="card-body">
+                        <p class="card-text">@materia.Descricao</p>
+                    </div>
+                    @Html.ActionLink("Ver Salas cursando esta matéria", "DetalhesMateria", "Materia", new { MateriaId = materia.MateriaId, CursoId = materia.CursoId}, new { @class = "btn btn-primary mx-1 my-1" })
+                    @Html.ActionLink("Editar", "EditarMateria", "Materia", new { MateriaId = materia.MateriaId, CursoId = Model.Curso.CursoId}, new { @class = "btn btn-light mx-1 my-1" })
+                    @Html.ActionLink("Apagar", "", "", null, new { @class = "btn btn-danger mx-1 my-1"})
+                </div>
+            }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
+        <p>
+            @Html.ActionLink("Adicionar Materia", "CadastrarMateria", "Materia", new { CursoId = Model.Curso.CursoId}, new { @class = "btn btn-outline-primary" })
+            @Html.ActionLink("Voltar para a lista de cursos", "DetalhesEscola", "Painel", new { EscolaID = Model.Curso.EscolaId } ,new { EscolaId = Model.Curso.EscolaId })
+        </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Escola.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Escola.Nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Escola.Cidade)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Escola.Cidade)
-        </dd>
-
-    </dl>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Editar", "EditarCurso", new { CursoId = Model.CursoId, EscolaId = Model.EscolaId }, new { @class = "btn btn-default"})
-    @Html.ActionLink("Lista de cursos", "Index", "Curso", new { @class = "btn btn-default btn-info" })
-</p>

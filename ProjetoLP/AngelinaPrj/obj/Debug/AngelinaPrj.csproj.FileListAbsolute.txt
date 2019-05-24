@@ -190,9 +190,5 @@ E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CoreCompileInp
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.AgoraVai.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._1.resources
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoTabelaCurso.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.ArrumandoRelacionamentos1.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.NewMigration.resources

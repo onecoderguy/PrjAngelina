@@ -111,15 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\DatabaseAdapted.mdf" />
-    <Content Include="App_Data\DatabaseAdapted_log.ldf">
-      <DependentUpon>DatabaseAdapted.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\Databasev.2.mdf" />
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -181,36 +173,24 @@
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MateriaController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905181737570_AgoraVai.cs" />
-    <Compile Include="Migrations\201905181737570_AgoraVai.Designer.cs">
-      <DependentUpon>201905181737570_AgoraVai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905181757038_ArrumandoTabelaCurso.cs" />
-    <Compile Include="Migrations\201905181757038_ArrumandoTabelaCurso.Designer.cs">
-      <DependentUpon>201905181757038_ArrumandoTabelaCurso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905181800222_ArrumandoRelacionamentos.cs" />
-    <Compile Include="Migrations\201905181800222_ArrumandoRelacionamentos.Designer.cs">
-      <DependentUpon>201905181800222_ArrumandoRelacionamentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905181804481_ArrumandoRelacionamentos1.cs" />
-    <Compile Include="Migrations\201905181804481_ArrumandoRelacionamentos1.Designer.cs">
-      <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905210159441_NewMigration.cs" />
-    <Compile Include="Migrations\201905210159441_NewMigration.Designer.cs">
-      <DependentUpon>201905210159441_NewMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201905241951348_1.cs" />
+    <Compile Include="Migrations\201905241951348_1.Designer.cs">
+      <DependentUpon>201905241951348_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Curso_Materia.cs" />
     <Compile Include="Models\Escola.cs" />
     <Compile Include="Models\Materia.cs" />
+    <Compile Include="Models\Materia_Sala.cs" />
     <Compile Include="Models\PrjContext.cs" />
+    <Compile Include="Models\Sala.cs" />
     <Compile Include="Models\TipoUsuario.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,9 +199,10 @@
     <Compile Include="ViewModel\AlteraSenhaViewModel.cs" />
     <Compile Include="ViewModel\CadastroCursoViewModel.cs" />
     <Compile Include="ViewModel\CadastroEscolaViewModel.cs" />
+    <Compile Include="ViewModel\CadastroMateriaViewModel.cs" />
     <Compile Include="ViewModel\CadastroViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesCursoViewModel.cs" />
     <Compile Include="ViewModel\DetalhesEscolaViewModel.cs" />
-    <Compile Include="ViewModel\EditaCursoViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +231,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Materia\Index.cshtml" />
+    <Content Include="Views\Materia\CadastrarMateria.cshtml" />
+    <Content Include="Views\Materia\EditarMateria.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,27 +242,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905181737570_AgoraVai.resx">
-      <DependentUpon>201905181737570_AgoraVai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905181757038_ArrumandoTabelaCurso.resx">
-      <DependentUpon>201905181757038_ArrumandoTabelaCurso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905181800222_ArrumandoRelacionamentos.resx">
-      <DependentUpon>201905181800222_ArrumandoRelacionamentos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905181804481_ArrumandoRelacionamentos1.resx">
-      <DependentUpon>201905181804481_ArrumandoRelacionamentos1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905210159441_NewMigration.resx">
-      <DependentUpon>201905210159441_NewMigration.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905241951348_1.resx">
+      <DependentUpon>201905241951348_1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

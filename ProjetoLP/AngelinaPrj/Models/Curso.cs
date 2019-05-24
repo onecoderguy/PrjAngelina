@@ -11,11 +11,6 @@ namespace AngelinaPrj.Models
     [Table("Cursos")]
     public class Curso
     {
-        public Curso()
-        {
-            Materias = new HashSet<Materia>();
-        }
-
         [Key]
         public int CursoId { get; set; }
 
@@ -32,6 +27,6 @@ namespace AngelinaPrj.Models
 
         public virtual Escola Escola { get; set; }
 
-        public virtual ICollection<Materia> Materias { get; set; }
+        public virtual ICollection<Curso_Materia> Curso_Materias { get; set; }
     }
 }

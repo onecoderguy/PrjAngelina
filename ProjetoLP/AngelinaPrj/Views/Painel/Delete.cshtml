@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Delete";
 }
-
-<h2>Delete</h2>
+<div class="container">
+    <div class="col-8 d-block mx-auto">
 
 <h3>Deseja realmente deletar esta escola ?</h3>
 @using (Html.BeginForm())
@@ -12,10 +12,9 @@
     @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
-        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <input type="submit" value="Deletar" class="btn btn-default" /> |
         @Html.ActionLink("Não", "Index", "Painel", new { @class = "btn btn-default" })
     </div>
 }
-<div>
-
+    <div>
 </div>

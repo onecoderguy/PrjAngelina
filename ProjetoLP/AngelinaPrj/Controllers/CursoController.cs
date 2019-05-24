@@ -1,11 +1,8 @@
 ﻿using AngelinaPrj.Models;
 using AngelinaPrj.ViewModel;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
@@ -16,9 +13,15 @@ namespace AngelinaPrj.Controllers
         private PrjContext db = new PrjContext();
 
         // GET: Curso/
-        public ActionResult Index()
+        public ActionResult Index(int ? EscolaId)
         {
-            return View(db.Cursos.ToList());
+            if (EscolaId == null)
+            {
+                return View(db.Cursos.ToList());
+            }
+
+            return View(db.Cursos.Where(e => e.EscolaId == EscolaId).ToList());
+
         }
 
         // GET: Curso/CadastrarCurso
@@ -128,9 +131,9 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Curso/DetalhesCurso
-        public ActionResult DetalhesCurso(int ? CursoId)
+        public ActionResult DetalhesCurso(int ? CursoId, int ? EscolaId)
         {
-            if (CursoId == null)
+            if (EscolaId == null || CursoId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -142,7 +145,17 @@ namespace AngelinaPrj.Controllers
                 return HttpNotFound();
             }
 
-            return View(curso);
+            var materias = db.Materias.Where(m => m.CursoId == CursoId).ToList();
+
+            var view = new DetalhesCursoViewModel
+            {
+                Curso = curso,
+                Materias = materias
+            };
+
+            return View(view);
         }
+
+       
     }
 }
