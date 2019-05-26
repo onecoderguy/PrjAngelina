@@ -2,5 +2,68 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<!-- Primeiro bloco de informações -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">Angelina Melaré</h1>
+        <hr class="star-light">
+        <h3 class="font-weight-light mb-0">
+            Professora da Faculdade de Tecnologia de Itu- Fatec Itu e prestadora de serviços na Área de Desenvolvimento de Sistemas. Atualmente ministro aulas de Linguagem de Programação nos cursos de Gestão da Tecnologia da Informação, Análise e Desenvolvimento de Sistemas.
+            Aqui você encontra os conteúdos das minhas aulas, lista de exercícios, apostilas, links de conteúdos para estudo,  informações sobre provas e entregas de atividades e demais assuntos relacionados as disciplinas que ministro.
+        </h3>
+    </div>
+</header>
+<!-- Formulário de inscrição  -->
+<section id="inscricao">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Preencha seus dados:</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Nome</label>
+                            <input class="form-control" id="name" type="text" placeholder="Nome" required="required" data-validation-required-message="Por favor preencha seu nome !">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Email</label>
+                            <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor preencha seu email !">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Login</label>
+                            <input class="form-control" id="login" type="text" placeholder="Login" required="required" data-validation-required-message="Por favor preencha seu nome !">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Senha</label>
+                            <textarea class="form-" id="password" type="password" placeholder="Senha" required="required" data-validation-required-message="Por favor preencha sua senha !"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Confirmação de Senha</label>
+                            <textarea class="form-control" id="password" type="password" placeholder="Confirmação de senha" required="required" data-validation-required-message="Por favor confirme sua senha !"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Cadastrar !</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

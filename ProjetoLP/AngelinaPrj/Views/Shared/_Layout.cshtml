@@ -1,12 +1,72 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewBag.Title</title>
+
     <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/magnific-popup.css" rel="stylesheet" />
+
+    <!-- Fontes-->
+    <link href="~/Content/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body id="page-top">
+    <!-- Menu Superior -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase navbar-shrink" id="mainNav">
+        <div class="container">
+            @Html.ActionLink("Nome Professor", "Index", "Home", new { area = "" }, new { @class = "navbar-brand js-scroll-trigger" })
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item mx-0 mx-lg-1">
+                            @Html.ActionLink("Cadastre-se", "Cadastrar", "Autenticacao", null, new { @class = "nav-link nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"})
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            @Html.ActionLink("Login", "Login", "Autenticacao", null, new { @class = "nav-link nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                    }
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item mx-0 mx-lg-1 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@User.Identity.Name</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @if (User.IsInRole("Professor"))
+                                {
+                                    @Html.ActionLink("Escolas", "Index", "Painel", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    @Html.ActionLink("Configurações", "ConfigsSite", "Painel", new { ProfessorId = 1 }, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    <div class="dropdown-divider"></div>
+                                    @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                    <div class="dropdown-divider"></div>
+                                    @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                }
+                            </div>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
         @Html.ActionLink("Nome Professor", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,43 +77,91 @@
             <ul class="navbar-nav ml-auto">
                 @if (!User.Identity.IsAuthenticated)
                 {
-                <li class="nav-item">
-                    @Html.ActionLink("Cadastre-se", "Cadastrar", "Autenticacao", null, new { @class = "nav-link" })
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Login", "Login", "Autenticacao", null,new { @class = "nav-link" })
-                </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Cadastre-se", "Cadastrar", "Autenticacao", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Login", "Login", "Autenticacao", null, new { @class = "nav-link" })
+                    </li>
                 }
 
                 @if (User.Identity.IsAuthenticated)
                 {
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@User.Identity.Name</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @if (User.IsInRole("Professor"))
-                        {
-                            @Html.ActionLink("Escolas", "Index", "Painel", null, new { @class = "dropdown-item" })
-                            @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "dropdown-item" })
-                            @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "dropdown-item" })
-                            @Html.ActionLink("Configurações", "ConfigsSite", "Painel", new { ProfessorId = 1 }, new { @class = "dropdown-item" })
-                            <div class="dropdown-divider"></div>
-                            @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "dropdown-item" })
-                        }
-                    </div>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@User.Identity.Name</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @if (User.IsInRole("Professor"))
+                            {
+                                @Html.ActionLink("Escolas", "Index", "Painel", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Configurações", "ConfigsSite", "Painel", new { ProfessorId = 1 }, new { @class = "dropdown-item" })
+                                <div class="dropdown-divider"></div>
+                                @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "dropdown-item" })
+                            }
+                        </div>
+                    </li>
                 }
             </ul>
         </div>
     </nav>
-        @RenderBody()
+    @RenderBody()
 
+    <!-- Botão Topo (Apenas Extra pequeno e pequeno) -->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mx-auto mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Redes Sociais</h4>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                <i class="fab fa-fw fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                <i class="fab fa-fw fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                <i class="fab fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                <i class="fab fa-fw fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                                <i class="fab fa-fw fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year</p>
-        </footer>
-    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; @DateTime.Now.Year</small>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/umd/popper.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
+
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery.easing.js"></script>
+    <script src="~/Scripts/jquery.magnific-popup.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+
 </body>
 </html>
