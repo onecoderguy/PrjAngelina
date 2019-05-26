@@ -170,12 +170,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Migrations\201905261634470_2.cs" />
+    <Compile Include="Migrations\201905261634470_2.Designer.cs">
+      <DependentUpon>201905261634470_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CadastroSalaViewModel.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MateriaController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +209,7 @@
     <Compile Include="ViewModel\CadastroViewModel.cs" />
     <Compile Include="ViewModel\DetalhesCursoViewModel.cs" />
     <Compile Include="ViewModel\DetalhesEscolaViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesMateriaViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +241,9 @@
     <Content Include="Views\Materia\Index.cshtml" />
     <Content Include="Views\Materia\CadastrarMateria.cshtml" />
     <Content Include="Views\Materia\EditarMateria.cshtml" />
+    <Content Include="Views\Materia\DetalhesMateria.cshtml" />
+    <Content Include="Views\Sala\Index.cshtml" />
+    <Content Include="Views\Sala\CadastrarSala.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -251,7 +261,11 @@
     <EmbeddedResource Include="Migrations\201905241951348_1.resx">
       <DependentUpon>201905241951348_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905261634470_2.resx">
+      <DependentUpon>201905261634470_2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

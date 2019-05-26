@@ -142,7 +142,7 @@ namespace AngelinaPrj.Controllers
         //GET: Materia/DetalhesMateria
         public ActionResult DetalhesMateria(int ? MateriaId, int? CursoId)
         {
-            if (CursoId == null || MateriaId == null)
+            if (MateriaId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -153,8 +153,21 @@ namespace AngelinaPrj.Controllers
             {
                 return HttpNotFound();
             }
+
+            var salas = db.Materias_Salas.Where(m => m.MateriaId == materia.MateriaId).ToList();
+
+            if (salas == null)
+            {
+                return HttpNotFound();
+            }
+
+            var view = new DetalhesMateriaViewModel
+            {
+                Materia = materia,
+                Materia_Salas = salas
+            };
             
-            return View(materia);
+            return View(view);
         }
     }
 }

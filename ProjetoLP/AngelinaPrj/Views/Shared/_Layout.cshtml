@@ -33,8 +33,9 @@
                         @if (User.IsInRole("Professor"))
                         {
                             @Html.ActionLink("Escolas", "Index", "Painel", null, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "dropdown-item" })
                             @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "dropdown-item" })
-                            @Html.ActionLink("Configurações", "ConfigsSite", "Painel", new { ProfessorId = 1}, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Configurações", "ConfigsSite", "Painel", new { ProfessorId = 1 }, new { @class = "dropdown-item" })
                             <div class="dropdown-divider"></div>
                             @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "dropdown-item" })
                         }

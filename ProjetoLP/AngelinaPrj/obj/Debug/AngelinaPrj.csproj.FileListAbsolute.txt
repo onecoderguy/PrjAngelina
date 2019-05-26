@@ -192,3 +192,4 @@ E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._1.resources
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._2.resources
