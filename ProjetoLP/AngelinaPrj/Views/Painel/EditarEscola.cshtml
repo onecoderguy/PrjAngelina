@@ -9,38 +9,36 @@
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
-            <div class="form-horizontal">
-                <h4>Editar informações de @Model.Nome</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.EscolaId)
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Cidade, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group text-center">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Salvar" class="btn btn btn-outline-primary" />
-                    </div>
+        <div class="form-horizontal height-80">
+            <h4 class="text-center mt-2">Editar informações de @Model.Nome</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.EscolaId)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
                 </div>
             </div>
-        }
+            <div class="form-group">
+                @Html.LabelFor(model => model.Cidade, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Salvar" class="btn btn btn-success" />
+                    @Html.ActionLink("Voltar para lista", "Index", "Painel", new { @class = "btn btn-outline-primary" })
+                </div>
+            </div>
 
-        <div>
-            @Html.ActionLink("Voltar para lista", "Index", "Painel", new { @class = "btn btn-primary" })
+            <div>
+                
+            </div>
         </div>
+        }
     </div>
 </div>   

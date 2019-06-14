@@ -4,8 +4,8 @@
     var nomeEscola = Model.Escola.Nome;
     ViewBag.Title = "Cursos " + nomeEscola;
 }
-<div class="container">
-    <h2>Cursos de: @Model.Escola.Nome</h2>
+<div class="container height-80">
+    <h2 class="text-center mt-2">Cursos de: @Model.Escola.Nome</h2>
 
     <div class="col-12">
         <div class="row justify-content-center">
@@ -26,8 +26,8 @@
             }
         </div>
 
-        <p>
-            @Html.ActionLink("Adicionar Curso", "CadastrarCurso", "Curso", new { EscolaId = Model.Escola.EscolaId }, new { @class = "btn btn-outline-primary" })
+        <p class="text-center">
+            @Html.ActionLink("Adicionar Curso", "CadastrarCurso", "Curso", new { EscolaId = Model.Escola.EscolaId }, new { @class = "btn btn-success" })
             @Html.ActionLink("Voltar para lista de escolas", "Index", "Painel", null, new { @class = "btn btn-outline-primary" })
         </p>
     </div>
