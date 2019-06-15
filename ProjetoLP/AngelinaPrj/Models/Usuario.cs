@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.Web.Mvc;
 
 namespace AngelinaPrj.Models
 {
@@ -29,5 +30,7 @@ namespace AngelinaPrj.Models
         [Required]
         [DefaultValue(0)]
         public TipoUsuario Tipo { get; set; } = TipoUsuario.Aluno;
+        
+        public virtual ICollection<Aluno_Sala> Alunos_Sala{ get; set; }
     }
 }

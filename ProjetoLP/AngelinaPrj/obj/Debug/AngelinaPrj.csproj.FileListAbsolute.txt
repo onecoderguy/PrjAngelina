@@ -258,3 +258,5 @@ C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\Ange
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.Alunos_Sala.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.CorrecaoTabelaAluno_Sala.resources

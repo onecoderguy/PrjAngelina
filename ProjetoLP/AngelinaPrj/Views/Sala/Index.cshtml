@@ -20,20 +20,7 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Semestre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Periodo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Situacao)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SalaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SalaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SalaId })
-        </td>
+        
     </tr>
 }
 

@@ -14,6 +14,9 @@ namespace AngelinaPrj.ViewModel
         [Required(ErrorMessage = "Informe o período da sala")]
         public string Periodo { get; set; }
 
+        [Required(ErrorMessage = "Informe o código da sala, ele será necessário para os alunos se cadastrarem !")]
+        public int CodigoSala { get; set; }
+
         [HiddenInput(DisplayValue = false )]
         public int MateriaId { get; set; }
 

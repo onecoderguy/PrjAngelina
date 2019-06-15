@@ -13,12 +13,13 @@ namespace AngelinaPrj.Controllers
     {
         private PrjContext db = new PrjContext();
 
-        // GET: Autenticacao
+        // GET: Autenticacao/Cadastrar
         public ActionResult Cadastrar()
         {
             return View();
         }
 
+        // POST: Autenticacao/Cadastrar
         [HttpPost]
         public ActionResult Cadastrar(CadastroViewModel viewmodel)
         {
@@ -33,6 +34,12 @@ namespace AngelinaPrj.Controllers
                 return View(viewmodel);
             }
 
+            if (db.Salas.Count(s => s.CodigoSala == viewmodel.CodigoSala) == 0)
+            {
+                ModelState.AddModelError("CodigoSala", "Esta sala não existe, você é meu aluno? ");
+                return View(viewmodel);
+            }
+            
             Usuario novoUsuario = new Usuario
             {
                 Nome = viewmodel.Nome,
@@ -42,6 +49,30 @@ namespace AngelinaPrj.Controllers
             };
 
             db.Usuarios.Add(novoUsuario);
+            db.SaveChanges();
+
+            var queryAluno =
+                (from Usuario in db.Usuarios
+                 where Usuario.Email == viewmodel.Email
+                 select new { Usuario.UsuarioId }).Single();
+
+            var CodAluno = queryAluno.UsuarioId;
+
+            var queryCodSala = 
+                (from Salas in db.Salas
+                          where Salas.CodigoSala == viewmodel.CodigoSala
+                          select new { Salas.SalaId}).Single();
+
+            var CodSala = queryCodSala.SalaId;
+
+            Aluno_Sala aluno_Sala = new Aluno_Sala
+            {
+                UsuarioId = CodAluno,
+                SalaId = CodSala                
+            };
+
+            db.Alunos_Sala.Add(aluno_Sala);
+
             db.SaveChanges();
 
             TempData["Mensagem"] = "Cadastro realizado com sucesso. Efetue login !";
@@ -59,6 +90,7 @@ namespace AngelinaPrj.Controllers
             return View(viewmodel);
         }
 
+        //POST: Autenticacao/Login
         [HttpPost]
         public ActionResult Login(LoginViewModel viewmodel)
         {
@@ -106,6 +138,7 @@ namespace AngelinaPrj.Controllers
             }
         }
 
+        //GET: Autenticacao/Logout
         public ActionResult Logout()
         {
             Request.GetOwinContext().Authentication.SignOut("ApplicationCookie");

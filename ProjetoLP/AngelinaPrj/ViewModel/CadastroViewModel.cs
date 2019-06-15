@@ -11,7 +11,7 @@ namespace AngelinaPrj.ViewModel
 
         [Required(ErrorMessage = "Digite sua data de nascimento")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data de Nascimento")]
+        [Display(Name = "Data de nascimento")]
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "Informe seu email")]
@@ -29,5 +29,9 @@ namespace AngelinaPrj.ViewModel
         [MinLength(6, ErrorMessage = "A senha deve ter pelo menos 6 caracteres")]
         [Compare(nameof(Senha), ErrorMessage = "A senha e a confirmação não estão iguais")]
         public string ConfirmacaoSenha { get; set; }
+
+        [Required(ErrorMessage = "Peça à professora o código da sua sala !")]
+        [Display(Name = "Código da sala")]
+        public int CodigoSala { get; set; }
     }
 }

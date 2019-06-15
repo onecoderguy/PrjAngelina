@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
 {
-    [Authorize(Roles = "Professor")]
+    [Authorize]
     public class SalaController : Controller
     {
         private PrjContext db = new PrjContext();
@@ -25,6 +25,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Sala/CadastrarSala
+        [Authorize(Roles = "Professor")]
         public ActionResult CadastrarSala(int MateriaId)
         {
             CadastroSalaViewModel sala = new CadastroSalaViewModel
@@ -36,6 +37,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //POST: Sala/CadastrarSala
+        [Authorize(Roles = "Professor")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CadastrarSala(CadastroSalaViewModel viewmodel, int MateriaId)
@@ -44,12 +46,16 @@ namespace AngelinaPrj.Controllers
             {
                 return View(viewmodel);
             }
+                Random rand = new Random((int)DateTime.Now.Ticks);
+                var CodigoSala = 0;
+                CodigoSala = rand.Next(1000, 9999);
 
             Sala sala = new Sala
             {
                 Semestre = viewmodel.Semestre,
                 Situacao = viewmodel.Situacao,
-                Periodo = viewmodel.Periodo
+                Periodo = viewmodel.Periodo,
+                CodigoSala = CodigoSala                
             };
 
             db.Salas.Add(sala);

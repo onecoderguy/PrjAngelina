@@ -14,13 +14,18 @@ namespace AngelinaPrj.Models
         public int Semestre { get; set; }
 
         [Required]
-        [MaxLength(10, ErrorMessage = "Pode conter no máximo 10 caracteres")]
+        [MaxLength(10)]
         public string Periodo { get; set; }
+
+        [Required]
+        public int CodigoSala { get; set; }
 
         [Required]
         public bool Situacao { get; set; }
         
         public virtual ICollection<Materia_Sala> Materias_Salas { get; set; }
+
+        public virtual ICollection<Aluno_Sala> Alunos_Sala { get; set; }
 
     }
 }
