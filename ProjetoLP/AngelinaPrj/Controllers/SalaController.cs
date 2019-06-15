@@ -3,6 +3,7 @@ using AngelinaPrj.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -72,5 +73,40 @@ namespace AngelinaPrj.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+        //GET Sala/SalasAluno
+        public ActionResult SalasAlunoById(int UsuarioId)
+        {
+            var queryVerificaAluno = db.Usuarios.Where(u => u.Nome == User.Identity.Name).FirstOrDefault();
+
+            int IdUsuarioSolicitado = queryVerificaAluno.UsuarioId;
+
+            if (UsuarioId == IdUsuarioSolicitado)
+            {
+                var querySalasDoAluno = db.Alunos_Sala.AsQueryable();
+
+                querySalasDoAluno = querySalasDoAluno.Where(s => s.UsuarioId == UsuarioId);
+
+                return View(querySalasDoAluno);
+            }
+
+            else
+            {
+                return RedirectToAction("Index", "Home", null);
+            }
+        }
+
+        //GET Sala/SalasAluno
+        public ActionResult SalasAlunoByName(string NomeUsuario)
+        {
+            var queryProcuraIdUsuario = db.Usuarios.AsQueryable().Where(u => u.Nome == NomeUsuario).FirstOrDefault();
+
+            int UsuarioId = queryProcuraIdUsuario.UsuarioId;
+
+            return (RedirectToAction("SalasAlunoById", new { UsuarioId = UsuarioId}));
+        }
     }
+
+        
 }

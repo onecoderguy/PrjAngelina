@@ -51,8 +51,8 @@
                                     @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
                                 }
                                 else
-                                {
-                                    @Html.ActionLink("Salas", "Index", "Sala", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
+                                {   
+                                    @Html.ActionLink("Salas", "SalasAlunoByName", "Sala", new { NomeUsuario = User.Identity.Name }, new { @class = "mx-0 mx-lg-1 dropdown-item" })
                                     @Html.ActionLink("Alterar senha", "AlterarSenha", "Perfil", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
                                     <div class="dropdown-divider"></div>
                                     @Html.ActionLink("Sair", "Logout", "Autenticacao", null, new { @class = "mx-0 mx-lg-1 dropdown-item" })
