@@ -4,15 +4,26 @@
     ViewBag.Title = "DetalhesMateria";
 }
 <div class="container">
+    <h2 class="text-center m-2">Salas de @Model.Materia.Nome</h2>
     <div class="col-12">
         <div class="row justify-content-center">
             @foreach (var sala in Model.Materia_Salas)
             {
                 <div class="card text-white bg-dark m-3 text-center" style="max-width: 18rem;">
-                    <div class="card-header">@sala.Salas.Situacao</div>
+                    <div class="card-header">Semestre: @sala.Salas.Semestre</div>
                     <div class="card-body">
-                        <p class="card-text">@sala.Salas.Periodo</p>
-                        <p class="card-text">@sala.Salas.Semestre</p>
+                        <p class="card-text">Professor: @sala.Materia.Professor</p>
+                        @{ 
+                            if (sala.Salas.Situacao == true)
+                            {
+                            <p class="card-text"><span class="badge badge-success">Em andamento</span></p>
+                            }
+                            else
+                            {
+                            <span class="badge badge-danger">Sala fechada !</span>
+                            }
+                        }
+
                     </div>
                 </div>
             }

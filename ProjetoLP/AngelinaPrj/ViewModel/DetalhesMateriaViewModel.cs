@@ -10,9 +10,7 @@ namespace AngelinaPrj.ViewModel
     {
         public Materia Materia { get; set; }
 
-        public string Curso { get; set; }
-
-        public string MyProperty { get; set; }
+        public Sala Sala { get; set; }
 
         public List<Materia_Sala> Materia_Salas { get; set; }
     }

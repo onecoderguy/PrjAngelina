@@ -3,8 +3,6 @@ using AngelinaPrj.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
@@ -21,8 +19,15 @@ namespace AngelinaPrj.Controllers
             {
                 return View(db.Salas.ToList());
             }
-            
-            return View(db.Materias_Salas.Where(s => s.MateriaId == MateriaId).ToList());
+            var listaSalas = new List<Materia_Sala>();
+            listaSalas = db.Materias_Salas.Where(s => s.MateriaId == MateriaId).ToList();
+
+            var listaMaterias = new List<Materia>();
+            listaMaterias = db.Materias.ToList();
+
+            ViewBag.Materias = listaMaterias;
+
+            return View(listaSalas);
         }
 
         //GET: Sala/CadastrarSala
@@ -51,12 +56,37 @@ namespace AngelinaPrj.Controllers
                 var CodigoSala = 0;
                 CodigoSala = rand.Next(1000, 9999);
 
+            //criar aqui as querys que procuram o nome da escola e da matéria
+            //pela matéria eu consigo o curso e pelo curso eu consigo a escola
+
+            var queryNomeMateria =
+                (from nMateria in db.Materias
+                 where nMateria.MateriaId == MateriaId
+                 select new { nMateria.Nome }).Single();
+
+            var queryCursoId =
+                (from cId in db.Materias
+                 where cId.MateriaId == MateriaId
+                 select new { cId.CursoId }).Single();
+
+            var queryEscolaId =
+                (from eId in db.Cursos
+                 where eId.CursoId == queryCursoId.CursoId
+                 select new { eId.EscolaId }).Single();
+
+            var queryNomeEscola =
+                (from nEscola in db.Escolas
+                 where nEscola.EscolaId == queryEscolaId.EscolaId
+                 select new { nEscola.Nome }).Single();
+
             Sala sala = new Sala
             {
                 Semestre = viewmodel.Semestre,
                 Situacao = viewmodel.Situacao,
                 Periodo = viewmodel.Periodo,
-                CodigoSala = CodigoSala                
+                CodigoSala = CodigoSala,
+                Escola = queryNomeEscola.Nome,
+                Materia = queryNomeMateria.Nome
             };
 
             db.Salas.Add(sala);
@@ -84,7 +114,7 @@ namespace AngelinaPrj.Controllers
 
             if (UsuarioId == IdUsuarioSolicitado)
             {
-                var querySalasDoAluno = db.Alunos_Sala.AsQueryable();
+                var querySalasDoAluno = db.Alunos_Sala.AsQueryable().AsEnumerable();
 
                 querySalasDoAluno = querySalasDoAluno.Where(s => s.UsuarioId == UsuarioId);
 

@@ -5,7 +5,7 @@
 }
 
 <div class="container height-80">
-    <h2 class="text-center mt-2">Materias de: @Model.Curso.Nome</h2>
+    <h2 class="text-center mt-2">Materias do curso de @Model.Curso.Nome em @Model.Curso.Escola.Nome</h2>
 
     <div class="col-12">
         <div class="row justify-content-center">
@@ -26,7 +26,7 @@
         </div>
 
         <p class="text-center">
-            @Html.ActionLink("Adicionar Materia", "CadastrarMateria", "Materia", new { CursoId = Model.Curso.CursoId}, new { @class = "btn btn-success" })
+            @Html.ActionLink("Adicionar Materia", "CadastrarMateria", "Materia", new { CursoId = Model.Curso.CursoId, EscolaId = Model.Curso.EscolaId}, new { @class = "btn btn-success" })
             @Html.ActionLink("Voltar para a lista de cursos", "DetalhesEscola", "Painel", new { CursoId = Model.Curso.CursoId , EscolaId = Model.Curso.EscolaId }, new { @class= "btn btn-primary" })
         </p>
 

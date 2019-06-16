@@ -26,7 +26,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Materia/CadastrarMateria
-        public ActionResult CadastrarMateria(int CursoId)
+        public ActionResult CadastrarMateria(int CursoId, int EscolaId)
         {
             CadastroMateriaViewModel materia = new CadastroMateriaViewModel
             {
@@ -39,7 +39,7 @@ namespace AngelinaPrj.Controllers
         //POST: Materia/CadastrarMateria
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CadastrarMateria(CadastroMateriaViewModel viewmodel, int CursoId)
+        public ActionResult CadastrarMateria(CadastroMateriaViewModel viewmodel, int CursoId, int EscolaId)
         {
             if (!ModelState.IsValid)
             {
@@ -64,16 +64,23 @@ namespace AngelinaPrj.Controllers
             };
 
             db.Materias.Add(materia);
+            db.SaveChanges();
+
+            var queryUltimaMateria =
+                (from m in db.Materias
+                 orderby m.MateriaId descending
+                 select new { m.MateriaId }).First();
 
             Curso_Materia curso_Materia = new Curso_Materia
             {
                 CursoId = materia.CursoId,
-                MateriaId = materia.MateriaId
+                MateriaId = queryUltimaMateria.MateriaId
             };
 
             db.Cursos_Materias.Add(curso_Materia);
+            db.SaveChanges();
 
-            return View("Index");
+            return RedirectToAction("DetalhesCurso", "Curso", new { CursoId = CursoId, EscolaId = EscolaId});
         }
 
         //GET: Materia/EditarMateria
@@ -164,9 +171,11 @@ namespace AngelinaPrj.Controllers
             var view = new DetalhesMateriaViewModel
             {
                 Materia = materia,
+                
                 Materia_Salas = salas
             };
             
+
             return View(view);
         }
     }

@@ -130,7 +130,7 @@ namespace AngelinaPrj.Controllers
             }
             else if (User.IsInRole("Aluno"))
             {
-                return RedirectToAction("SalasAlunoById", "Salas", new { UsuarioId = usuario.UsuarioId});
+                return RedirectToAction("SalasAlunoById", "Sala", new { UsuarioId = usuario.UsuarioId});
             }
             else
             {

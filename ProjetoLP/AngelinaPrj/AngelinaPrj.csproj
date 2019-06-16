@@ -1795,7 +1795,16 @@
     <Compile Include="Migrations\201906142229118_CorrecaoTabelaAluno_Sala.Designer.cs">
       <DependentUpon>201906142229118_CorrecaoTabelaAluno_Sala.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906161628551_agregandoValoresTabelaSala.cs" />
+    <Compile Include="Migrations\201906161628551_agregandoValoresTabelaSala.Designer.cs">
+      <DependentUpon>201906161628551_agregandoValoresTabelaSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906161734017_AdicionandoMaterialModel.cs" />
+    <Compile Include="Migrations\201906161734017_AdicionandoMaterialModel.Designer.cs">
+      <DependentUpon>201906161734017_AdicionandoMaterialModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Aluno_Sala.cs" />
+    <Compile Include="Models\Material.cs" />
     <Compile Include="ViewModel\CadastroSalaViewModel.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
@@ -1892,6 +1901,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906142229118_CorrecaoTabelaAluno_Sala.resx">
       <DependentUpon>201906142229118_CorrecaoTabelaAluno_Sala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906161628551_agregandoValoresTabelaSala.resx">
+      <DependentUpon>201906161628551_agregandoValoresTabelaSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906161734017_AdicionandoMaterialModel.resx">
+      <DependentUpon>201906161734017_AdicionandoMaterialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
