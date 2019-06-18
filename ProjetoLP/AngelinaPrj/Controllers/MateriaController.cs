@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
 {
+    [Authorize(Roles = "Professor")]
     public class MateriaController : Controller
     {
         private PrjContext db = new PrjContext();
@@ -84,7 +85,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Materia/EditarMateria
-        public ActionResult EditarMateria(int ? MateriaId, int CursoId)
+        public ActionResult EditarMateria(int ? MateriaId)
         {
             if (MateriaId == null)
             {
@@ -147,7 +148,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET: Materia/DetalhesMateria
-        public ActionResult DetalhesMateria(int ? MateriaId, int? CursoId)
+        public ActionResult DetalhesMateria(int ? MateriaId)
         {
             if (MateriaId == null)
             {
@@ -168,7 +169,7 @@ namespace AngelinaPrj.Controllers
                 return HttpNotFound();
             }
 
-            var view = new DetalhesMateriaViewModel
+            var viewmodel = new DetalhesMateriaViewModel
             {
                 Materia = materia,
                 
@@ -176,7 +177,7 @@ namespace AngelinaPrj.Controllers
             };
             
 
-            return View(view);
+            return View(viewmodel);
         }
     }
 }

@@ -2,7 +2,9 @@
 using AngelinaPrj.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
@@ -13,6 +15,7 @@ namespace AngelinaPrj.Controllers
         private PrjContext db = new PrjContext();
 
         // GET: Sala/
+        [Authorize(Roles = "Professor")]
         public ActionResult Index(int ? MateriaId)
         {
             if (MateriaId == null)
@@ -104,8 +107,8 @@ namespace AngelinaPrj.Controllers
             return RedirectToAction("Index");
         }
 
-
         //GET Sala/SalasAluno
+        [Authorize(Roles = "Aluno")]
         public ActionResult SalasAlunoById(int UsuarioId)
         {
             var queryVerificaAluno = db.Usuarios.Where(u => u.Nome == User.Identity.Name).FirstOrDefault();
@@ -128,6 +131,7 @@ namespace AngelinaPrj.Controllers
         }
 
         //GET Sala/SalasAluno
+        [Authorize]
         public ActionResult SalasAlunoByName(string NomeUsuario)
         {
             var queryProcuraIdUsuario = db.Usuarios.AsQueryable().Where(u => u.Nome == NomeUsuario).FirstOrDefault();
@@ -136,7 +140,76 @@ namespace AngelinaPrj.Controllers
 
             return (RedirectToAction("SalasAlunoById", new { UsuarioId = UsuarioId}));
         }
-    }
 
+        //GET: Sala/EditarSala
+        [Authorize(Roles = "Professor")]
+        public ActionResult EditarSala(int ? SalaId)
+        {
+            if (SalaId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Sala sala = db.Salas.Find(SalaId);
+
+            if (sala == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(sala);
+        }
+
+
+        //POST: Sala/EditarSala
+        [Authorize(Roles = "Professor")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditarSala([Bind(Include = "SalaId, Semestre, Situacao, Periodo, CodigoSala, Escola, Materia")] Sala sala)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(sala);
+            }
+
+            db.Entry(sala).State = EntityState.Modified;
+            db.SaveChanges();
+
+            return View(sala);
+        }
+
+        //GET Sala/DetalhesSala
+        [Authorize(Roles = "Aluno, Professor")]
+        public ActionResult DetalhesSala(int? SalaId)
+        {
+            if (SalaId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Sala sala = db.Salas.Find(SalaId);
+
+            if (sala == null)
+            {
+                return HttpNotFound();
+            }
+
+            var materiais = db.Materiais.Where(m => m.Sala.SalaId == sala.SalaId).ToList();
+
+            if (materiais == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewmodel = new DetalhesSalaViewModel
+            {
+                Sala = sala,
+
+                Materiais = materiais
+            };
+
+            return View(viewmodel);
+        }
+    }
         
 }

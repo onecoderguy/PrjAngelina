@@ -111,7 +111,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Databasev.2.mdf" />
+    <Content Include="App_Data\BancodeDados.mdf" />
+    <Content Include="App_Data\BancodeDados_log.ldf">
+      <DependentUpon>BancodeDados.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -1783,28 +1786,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Migrations\201905261634470_2.cs" />
-    <Compile Include="Migrations\201905261634470_2.Designer.cs">
-      <DependentUpon>201905261634470_2.cs</DependentUpon>
+    <Compile Include="Controllers\ExercicioController.cs" />
+    <Compile Include="Controllers\MateriaisController.cs" />
+    <Compile Include="Migrations\201906182033168_1.cs" />
+    <Compile Include="Migrations\201906182033168_1.Designer.cs">
+      <DependentUpon>201906182033168_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906141440477_Alunos_Sala.cs" />
-    <Compile Include="Migrations\201906141440477_Alunos_Sala.Designer.cs">
-      <DependentUpon>201906141440477_Alunos_Sala.cs</DependentUpon>
+    <Compile Include="Migrations\201906182037368_2.cs" />
+    <Compile Include="Migrations\201906182037368_2.Designer.cs">
+      <DependentUpon>201906182037368_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906142229118_CorrecaoTabelaAluno_Sala.cs" />
-    <Compile Include="Migrations\201906142229118_CorrecaoTabelaAluno_Sala.Designer.cs">
-      <DependentUpon>201906142229118_CorrecaoTabelaAluno_Sala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906161628551_agregandoValoresTabelaSala.cs" />
-    <Compile Include="Migrations\201906161628551_agregandoValoresTabelaSala.Designer.cs">
-      <DependentUpon>201906161628551_agregandoValoresTabelaSala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906161734017_AdicionandoMaterialModel.cs" />
-    <Compile Include="Migrations\201906161734017_AdicionandoMaterialModel.Designer.cs">
-      <DependentUpon>201906161734017_AdicionandoMaterialModel.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno_Sala.cs" />
+    <Compile Include="Models\Exercicio.cs" />
     <Compile Include="Models\Material.cs" />
+    <Compile Include="ViewModel\CadastroExercicioViewModel.cs" />
+    <Compile Include="ViewModel\CadastroMaterialViewModel.cs" />
     <Compile Include="ViewModel\CadastroSalaViewModel.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
@@ -1816,11 +1813,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905241951348_1.cs" />
-    <Compile Include="Migrations\201905241951348_1.Designer.cs">
-      <DependentUpon>201905241951348_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Curso_Materia.cs" />
     <Compile Include="Models\Escola.cs" />
@@ -1840,7 +1832,9 @@
     <Compile Include="ViewModel\CadastroViewModel.cs" />
     <Compile Include="ViewModel\DetalhesCursoViewModel.cs" />
     <Compile Include="ViewModel\DetalhesEscolaViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesMaterialViewModel.cs" />
     <Compile Include="ViewModel\DetalhesMateriaViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesSalaViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1876,6 +1870,18 @@
     <Content Include="Views\Sala\Index.cshtml" />
     <Content Include="Views\Sala\CadastrarSala.cshtml" />
     <Content Include="Views\Sala\SalasAlunoById.cshtml" />
+    <Content Include="Views\Sala\EditarSala.cshtml" />
+    <Content Include="Views\Sala\DetalhesSala.cshtml" />
+    <Content Include="Views\Materiais\Delete.cshtml" />
+    <Content Include="Views\Materiais\EditarMaterial.cshtml" />
+    <Content Include="Views\Materiais\Index.cshtml" />
+    <Content Include="Views\Materiais\CadastrarMaterial.cshtml" />
+    <Content Include="Views\Exercicio\Delete.cshtml" />
+    <Content Include="Views\Exercicio\DetalhesExercicio.cshtml" />
+    <Content Include="Views\Exercicio\EditarExercicio.cshtml" />
+    <Content Include="Views\Exercicio\Index.cshtml" />
+    <Content Include="Views\Materiais\DetalhesMaterial.cshtml" />
+    <Content Include="Views\Exercicio\CriarExercicio.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1890,26 +1896,16 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905241951348_1.resx">
-      <DependentUpon>201905241951348_1.cs</DependentUpon>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906182033168_1.resx">
+      <DependentUpon>201906182033168_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905261634470_2.resx">
-      <DependentUpon>201905261634470_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906141440477_Alunos_Sala.resx">
-      <DependentUpon>201906141440477_Alunos_Sala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906142229118_CorrecaoTabelaAluno_Sala.resx">
-      <DependentUpon>201906142229118_CorrecaoTabelaAluno_Sala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906161628551_agregandoValoresTabelaSala.resx">
-      <DependentUpon>201906161628551_agregandoValoresTabelaSala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906161734017_AdicionandoMaterialModel.resx">
-      <DependentUpon>201906161734017_AdicionandoMaterialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906182037368_2.resx">
+      <DependentUpon>201906182037368_2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

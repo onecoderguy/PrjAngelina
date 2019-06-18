@@ -1,4 +1,4 @@
-namespace AngelinaPrj.Migrations
+﻿namespace AngelinaPrj.Migrations
 {
     using System;
     using System.Data.Entity;

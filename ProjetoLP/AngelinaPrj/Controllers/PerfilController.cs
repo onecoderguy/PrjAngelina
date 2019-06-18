@@ -7,11 +7,12 @@ using System.Web.Mvc;
 
 namespace AngelinaPrj.Controllers
 {
+
+    [Authorize]
     public class PerfilController : Controller
     {
         private PrjContext db = new PrjContext();
 
-        
         // GET: Perfil/AlterarSenha
         public ActionResult AlterarSenha()
         {

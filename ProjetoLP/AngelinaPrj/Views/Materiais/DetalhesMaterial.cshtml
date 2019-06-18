@@ -1,0 +1,83 @@
+﻿@model AngelinaPrj.ViewModel.DetalhesMaterialViewModel
+
+@{ 
+    var nomeMateria = @Model.Material.Sala.Materia;
+}
+
+@{
+    ViewBag.Title = "Detalhes do Material em "+nomeMateria;
+}
+
+<h2 class="text-center col-8 d-block mx-auto mt-2">Detalhes do Material de @Model.Material.Data.Day/@Model.Material.Data.Month/@Model.Material.Data.Year em @Model.Material.Sala.Materia</h2>
+
+<div class="container text-center">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Resumo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material.Resumo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Assunto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material.Assunto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Arquivo)
+        </dt>
+
+        <dd>
+            @Html.ActionLink("Download", "DownloadMaterial", new { arquivo = @Model.Material.Arquivo })
+        </dd>
+
+    </dl>
+</div>
+
+<h2 class="text-center col-8 d-block mx-auto mt-2">Exercícios</h2>
+
+<div class="row justify-content-center">
+    @foreach (var exercicio in Model.Exercicios)
+    {
+
+        <div class="card text-white bg-dark m-3 text-center" style="max-width: 18rem;">
+            <div class="card-header">@exercicio.DataDeEntrega</div>
+            <div class="card-body">
+                <p class="card-text">Data de Entrega: @exercicio.Proposta</p>
+                <p class="card-text">Arquivo de apoio: @Html.ActionLink("Download", "DownloadMaterial", new { arquivo = @Model.Material.Arquivo })</p>
+            </div>
+        </div>
+    }
+</div>
+@{
+    if (User.IsInRole("Professor"))
+    {
+        <p>
+            @Html.ActionLink("Criar Exercício", "CriarExercicio", "Exercicio", new { MaterialId = Model.Material.MaterialId}, new { @class = "btn btn-primary"})
+            @Html.ActionLink("Edit", "EditarMaterial", new { MaterialId = Model.Material.MaterialId }, new { @class = "btn btn-primary"})
+            @Html.ActionLink("Voltar para lista de materiais", "Index")
+        </p>
+    }
+}

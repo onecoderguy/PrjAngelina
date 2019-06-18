@@ -1,7 +1,8 @@
 ﻿@model AngelinaPrj.ViewModel.DetalhesMateriaViewModel
-
 @{
-    ViewBag.Title = "DetalhesMateria";
+                /**/
+
+                ViewBag.Title = "DetalhesMateria";
 }
 <div class="container">
     <h2 class="text-center m-2">Salas de @Model.Materia.Nome</h2>
@@ -10,24 +11,28 @@
             @foreach (var sala in Model.Materia_Salas)
             {
                 <div class="card text-white bg-dark m-3 text-center" style="max-width: 18rem;">
-                    <div class="card-header">Semestre: @sala.Salas.Semestre</div>
+                    <div class="card-header">Escola: @sala.Salas.Escola</div>
                     <div class="card-body">
-                        <p class="card-text">Professor: @sala.Materia.Professor</p>
-                        @{ 
+                        <p class="card-text">Semestre: @sala.Salas.Semestre</p>
+                        <p class="card-text">Período: @sala.Salas.Periodo</p>
+                        <p class="card-text">Materia: @sala.Materia.Nome</p>
+                        @{
                             if (sala.Salas.Situacao == true)
                             {
-                            <p class="card-text"><span class="badge badge-success">Em andamento</span></p>
+                                <p class="card-text"><span class="badge badge-success">Em andamento</span></p>
                             }
                             else
                             {
-                            <span class="badge badge-danger">Sala fechada !</span>
+                                <span class="badge badge-danger">Sala fechada !</span>
                             }
                         }
-
                     </div>
+                    @Html.ActionLink("Ver materiais da sala", "DetalhesSala", "Sala", new { SalaId = sala.SalaId}, new { @class = "btn btn-primary mx-1 my-1" })
+                    @Html.ActionLink("Alterar situação", "EditarSala", "Sala", new { SalaId = sala.SalaId }, new { @class = "btn btn-danger mx-1 my-1" })
                 </div>
             }
         </div>
         @Html.ActionLink("Nova Sala", "CadastrarSala", "Sala", new { MateriaId = Model.Materia.MateriaId}, null)
     </div>
 </div>
+@Html.ActionLink("Nova Sala", "CadastrarSala", "Sala", new { MateriaId = Model.Materia.MateriaId }, null)

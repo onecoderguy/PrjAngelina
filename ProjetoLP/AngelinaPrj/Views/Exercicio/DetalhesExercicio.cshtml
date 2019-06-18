@@ -1,0 +1,42 @@
+﻿@model AngelinaPrj.Models.Exercicio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exercicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Proposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proposta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arquivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arquivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeEntrega)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExercicioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

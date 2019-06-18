@@ -190,9 +190,6 @@ E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CoreCompileInp
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._1.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._2.resources
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.dll.config
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.dll
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\bin\AngelinaPrj.pdb
@@ -258,7 +255,6 @@ C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\Ange
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.CopyComplete
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.dll
 C:\Users\Unknwon\Desktop\PrjAngelina-master\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.pdb
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.Alunos_Sala.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.CorrecaoTabelaAluno_Sala.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.agregandoValoresTabelaSala.resources
-E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations.AdicionandoMaterialModel.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._1.resources
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.csproj.GenerateResource.cache
+E:\PrjAngelina\ProjetoLP\AngelinaPrj\obj\Debug\AngelinaPrj.Migrations._2.resources

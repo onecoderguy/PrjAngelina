@@ -26,5 +26,7 @@ namespace AngelinaPrj.Models
         public DbSet<Aluno_Sala> Alunos_Sala { get; set; }
 
         public DbSet<Material> Materiais { get; set; }
+
+        public DbSet<Exercicio> Exercicios { get; set; }
     }
 }

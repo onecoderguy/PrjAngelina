@@ -1,0 +1,30 @@
+﻿@model AngelinaPrj.ViewModel.DetalhesSalaViewModel
+
+@{
+    ViewBag.Title = "DetalhesSala";
+}
+<div class="container">
+    <div class="row col-8 d-block mx-auto m-3">
+        <h2 class="pt=2 text-center">Materiais e Exercícios da sala de @Model.Sala.Materia em @Model.Sala.Escola</h2>
+    </div>
+        @foreach (var material in Model.Materiais)
+        {
+            <div class="col-10 card text-center mb-4 d-block mx-auto">
+                <div class="card-header">
+                    @material.Assunto
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">@material.Descricao</p>
+                    @Html.ActionLink("Ver material e seu exercícios", "DetalhesMaterial", "Materiais", new { MaterialId = material.MaterialId }, new { @class = "btn btn-primary" })
+                </div>
+                <div class="card-footer text-muted">
+                    @material.Data
+                </div>
+            </div>
+        }
+    <p>
+        @Html.ActionLink("Adicionar Material", "CadastrarMaterial", "Materiais", new { SalaId = Model.Sala.SalaId }, new { @class = "btn btn-success" }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
